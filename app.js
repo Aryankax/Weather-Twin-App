@@ -1,8 +1,10 @@
+//Type node app.js in your bash terminal to start the app!
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const request = require('request');
 const app = express()
-const apiKey = '*********';
+const apiKey = '********'; //Enter your own OpenWeather API KEY
 
 app.use(express.static('public'));
 
@@ -49,5 +51,5 @@ app.get('/', async (req, res) => {
   })
 
   app.listen(3000, function() {
-    console.log("Server Started")
+    console.log("Server Started on http://localhost:3000/")
   })
