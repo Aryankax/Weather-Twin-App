@@ -1,0 +1,25 @@
+<% if(weather !== null){ %>
+          <p><%= weather %></p>
+          <p><%= feelslike %></p>
+          <p><%= description %></p>
+          <img src="<%= icon %>">
+        <% } %>
+
+        <% if(error !== null){ %>
+          <p><%= error %></p>
+        <% } %>
+
+       <%  if(chennaiWeather !== null) { %>
+        <p><%= chennaiWeather %></p>
+        <p><%= feelslike_Chennai %></p>
+        <p><%= description_Chennai %></p>
+        <img src="<%= icon_Chennai %>">
+       <% } %>
+
+       <% if(errorChennai !== null){ %>
+        <p><%= errorChennai %></p>
+      <% } %>
+
+
+    useless : 
+    http://api.openweathermap.org/data/2.5/weather?q=Lucknow&units=imperial&appid=5d3b206d05a51aabd36d23eb3c2f4782

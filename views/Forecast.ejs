@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Edu+TAS+Beginner:wght@600&family=Lora&family=Pacifico&family=Playfair+Display&family=Teko&display=swap" rel="stylesheet">
+  </head>
+  <body>
+        <% const temp1 = data.data1.main.temp %>
+        <% const city = data.data1.name %>
+        <% const feelsLike1 = data.data1.main.feels_like %>
+        <% const description1 = data.data1.weather[0].description %>
+        <% const iconId1 = data.data1.weather[0].icon %>
+
+        <% const iconUrl1 = "http://openweathermap.org/img/wn/" + iconId1 + "@2x.png" %>
+
+        <% const temp2 = data.data2.main.temp %>
+        <% const city2 = data.data2.name %>
+
+        <% const feelsLike2 = data.data2.main.feels_like %>
+        <% const description2 = data.data2.weather[0].description %>
+        <% const iconId2 = data.data2.weather[0].icon %>
+
+        <% const iconUrl2 = "http://openweathermap.org/img/wn/" + iconId2 + "@2x.png" %>
+          <body>
+          
+          <div class="card first">
+            <img src=<%= iconUrl1 %> alt="Weather Image 1" style="width:100px">
+            <div class="container">
+              <h1 style="font-family: 'Amatic SC', cursive;"><b><%= city %></b></h1> 
+              <p>Temperature: <%= temp1 %> °C</p> 
+              <p>Feels Like: <%= feelsLike1 %> °C</p> 
+              <p><%= description1 %></p> 
+            </div>
+          </div>
+
+          <br>
+
+          <div class="card second">
+            <img src=<%= iconUrl2 %> alt="Weather Icon 2" style="width:100px">
+            <div class="container">
+              <h1 style="font-family: 'Amatic SC', cursive;"><b><%= city2 %></b></h1> 
+              <p>Temperature: <%= temp2 %> °C</p> 
+              <p>Feels Like: <%= feelsLike2 %> °C</p> 
+              <p><%= description2 %></p> 
+            </div>
+          </div>
+
+          <br>
+
+      <form action="/newLocation" method="post">
+        <button class="ghost-button">Click</button>
+      </form>
+    </div>
+  </body>
+</html>
